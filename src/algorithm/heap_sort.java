@@ -6,7 +6,7 @@ public class heap_sort {
 		// TODO Auto-generated method stub
 
 		// 트리구조를 최대 힙구조로 변경
-		int heap[] = { 7, 6, 5, 3, 8, 5, 9, 1, 6};
+		int heap[] = { 7, 6, 5, 3, 8, 5, 9, 1, 6 };
 		for (int i = 1; i < heap.length; i++) {
 			int child = i;
 
@@ -21,9 +21,9 @@ public class heap_sort {
 				}
 				child = parent;
 			}
-
 		}
 
+		System.out.print("heap arr : ");
 		for (int i : heap)
 			System.out.print(i);
 
@@ -49,7 +49,17 @@ public class heap_sort {
 				}
 				parent = child;
 			}
+
 		}
+
+		// 계산되지 않은 마지막 비교식
+
+		if (heap[0] > heap[1]) {
+			int temp = heap[0];
+			heap[0] = heap[1];
+			heap[1] = temp;
+		}
+
 		System.out.println();
 		for (int i : heap)
 			System.out.print(i);
