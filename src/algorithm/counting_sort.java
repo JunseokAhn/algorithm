@@ -20,13 +20,20 @@ public class counting_sort {
 
 		int sum = 0;
 
-		for (int i = 0; i < count.length; i++) {
-			for (int j = 0; j < count[i]; j++) {
-				
+
+		for (int i = 1; i <= count.length; i++) {
+			for (int j = 0; j < count[i - 1]; j++) {
+				arr[sum] = i;
+				sum++;
 			}
-			sum += count[i]-1;
 		}
 
+		//각 숫자들의 범위의 합
+		for (int i : count)
+			System.out.print(i);
+		System.out.println();
+
+		//계수 정렬
 		for (int i : arr)
 			System.out.print(i);
 	}
